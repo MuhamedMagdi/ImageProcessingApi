@@ -6,11 +6,12 @@ const imageResize = async (
     imagePath: string,
     width: unknown,
     height: unknown
-): Promise<void> => {
+): Promise<object> => {
     const thumbnailPath = getThumbnailPath(imageName, width, height);
-    await sharp(imagePath)
+    const value = await sharp(imagePath)
         .resize(Number(width), Number(height))
         .toFile(thumbnailPath);
+    return value;
 };
 
 export default imageResize;
