@@ -7,6 +7,10 @@
 ```
 npm i
 ```
+- You should also install `ts-node` globally for `nodemon` to work
+```
+npm i -g ts-node
+```
 
 ## Scripts
 - Bulid the project from `TypeScript` to `JavaScript` and save it to `/build`
