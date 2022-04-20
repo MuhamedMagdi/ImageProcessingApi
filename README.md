@@ -4,32 +4,50 @@
 ## Installation
 
 - After cloneing the repo open the folder in the terminal and run the following command to install all third part packages
-    > npm i
+```
+npm i
+```
 
 ## Scripts
 - Bulid the project from `TypeScript` to `JavaScript` and save it to `/build`
-    > npm run build
+```
+npm run build
+```
 
 - Starting the final built of the project
-    > npm run start
+```
+npm run start
+```
 
 - Running the `TypeScript` server in development with `nodemon`
-    > npm run dev
+```
+npm run dev
+```
 
 - Getting linting errors using `eslint`
-    > npm run lint
+```
+npm run lint
+```
 
 - Fixing linting errors using `eslint`
-   > npm run lint:fix
+```
+npm run lint:fix
+```
 
 - Formating the project using `prettier`
-    > npm run format
+```
+npm run format
+```
 
 - Testing the scripts using `jasmine`
-    > npm run jasmine
+```
+npm run jasmine
+```
 
 - Building the project and testing the scripts
-    > npm run test
+```
+npm run test
+```
 
 ## Endpoints
 |URI|Usage|
@@ -40,10 +58,15 @@
 
 ## Finally to run the server 
 - You should build the project first with 
-    > npm run build
+```
+npm run build
+```
 
 - You can now run the project with
-    > npm run strart
+```
+npm run strart
+```
 
 - The server should be running on port `3000`
-    > http://127.0.0.1:3000/api
+```
+http://127.0.0.1:3000/api```
