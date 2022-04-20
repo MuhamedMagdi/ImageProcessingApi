@@ -9,7 +9,7 @@
     "dev": "nodemon ./src/app.ts",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
-    "format": "prettier --ignore-path .gitignore --write \"src/**/*.+ts\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "jasmine": "jasmine",
     "test": "npm run build && npm run jasmine"
   },
