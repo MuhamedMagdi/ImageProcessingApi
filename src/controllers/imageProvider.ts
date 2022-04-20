@@ -1,5 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
-import path from 'path';
+import { Request, Response } from 'express';
 import thumbnailExists from '../utilities/thumbnailExists';
 import imageResize from '../utilities/resizeImage';
 import { getImagePath, getThumbnailPath } from '../utilities/getPath';
