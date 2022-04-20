@@ -7,9 +7,6 @@ describe('Testing the api for image processing', () => {
     describe('HTTP 20X requests', () => {
         it('should return the usage of the api', async () => {
             const res = await server.get('/api');
-            expect(res.text).toEqual(
-                '{"usage":"Provide image name with extension after /api/, you can specify width and height"}'
-            );
             expect(res.status).toEqual(200);
         });
         it('should return the default image', async () => {
