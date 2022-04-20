@@ -13,12 +13,7 @@ const getImage = async (req: Request, res: Response) => {
         if (!exists) {
             await imageResize(imagename, imagePath, width, height);
         }
-        const thumbnailpath = getThumbnailPath(
-            imagename,
-            imagePath,
-            width,
-            height
-        );
+        const thumbnailpath = getThumbnailPath(imagename, width, height);
         res.sendFile(thumbnailpath);
     }
 };
