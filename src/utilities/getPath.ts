@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from 'fs-extra';
 
 const getImagePath = (imagename: string): string => {
     return path.join(__dirname, '../../', 'media', 'images', imagename);
@@ -22,4 +23,9 @@ const getThumbnailPath = (
     return output;
 };
 
-export { getImagePath, getThumbnailPath };
+const listImages = async (path: string): Promise<string[]> => {
+    const files = await fs.readdir(path);
+    return files;
+};
+
+export { getImagePath, getThumbnailPath, listImages };
