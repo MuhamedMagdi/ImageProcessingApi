@@ -1,16 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import fs from 'fs-extra';
-import path from 'path';
+import { getImagePath } from '../utilities/getPath';
 
 const imageExist = async (req: Request, res: Response, next: NextFunction) => {
     const { imagename } = req.params;
-    const imagepath = path.join(
-        __dirname,
-        '../../',
-        'media',
-        'images',
-        imagename
-    );
+    const imagepath = getImagePath(imagename);
     const exists = await fs.pathExists(imagepath);
     if (exists) {
         next();
