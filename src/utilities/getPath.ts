@@ -6,7 +6,6 @@ const getImagePath = (imagename: string): string => {
 
 const getThumbnailPath = (
     imagename: string,
-    imagepath: string,
     width: unknown,
     height: unknown
 ): string => {

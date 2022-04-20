@@ -1,21 +1,12 @@
-import path from 'path';
 import fs from 'fs-extra';
+import { getThumbnailPath } from './getPath';
 
 const thumbnailExists = async (
     imagename: string,
     width: unknown,
     height: unknown
 ): Promise<boolean> => {
-    width = width as number;
-    height = height as number;
-    const thumbnailPath = path.join(
-        __dirname,
-        '../../',
-        'media',
-        'images',
-        'thumbnail',
-        imagename
-    );
+    const thumbnailPath = getThumbnailPath(imagename, width, height);
     const exists = await fs.pathExists(thumbnailPath);
     if (exists) {
         return true;
