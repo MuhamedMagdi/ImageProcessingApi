@@ -26,7 +26,7 @@ describe('Testing the utilities', () => {
         expect(width).toEqual(imageWidth);
         expect(height).toEqual(imageHeight);
     }));
-    fit('should throw an error', () => __awaiter(void 0, void 0, void 0, function* () {
+    it('should throw an error', () => __awaiter(void 0, void 0, void 0, function* () {
         const imagename = 'fjord.png';
         const imagePath = (0, getPath_1.getImagePath)(imagename);
         const imageWidth = 500;
