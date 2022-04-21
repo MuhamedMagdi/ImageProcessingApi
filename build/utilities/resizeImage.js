@@ -16,8 +16,9 @@ const sharp_1 = __importDefault(require("sharp"));
 const getPath_1 = require("./getPath");
 const imageResize = (imageName, imagePath, width, height) => __awaiter(void 0, void 0, void 0, function* () {
     const thumbnailPath = (0, getPath_1.getThumbnailPath)(imageName, width, height);
-    yield (0, sharp_1.default)(imagePath)
+    const value = yield (0, sharp_1.default)(imagePath)
         .resize(Number(width), Number(height))
         .toFile(thumbnailPath);
+    return value;
 });
 exports.default = imageResize;
