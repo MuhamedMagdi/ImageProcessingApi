@@ -22,7 +22,7 @@ describe('Testing the utilities', () => {
         expect(width).toEqual(imageWidth);
         expect(height).toEqual(imageHeight);
     });
-    fit('should throw an error', async () => {
+    it('should throw an error', async () => {
         const imagename = 'fjord.png';
         const imagePath = getImagePath(imagename);
         const imageWidth = 500;
